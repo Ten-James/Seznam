@@ -1,0 +1,1 @@
+# Repozitář pro Praxe Seznam
