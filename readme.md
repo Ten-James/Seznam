@@ -2,15 +2,17 @@
 
 Jakub Indrák
 
-# Jupyter Sešity
+## Jupyter Sešity
 
 [Iterace čísel](<Iterace\ čísel.ipynb>)
 
-- vrací řadů čísel $a+c$
+- vrací řadu čísel 
 
-# Složky
+$$[1^{n} \bmod n,2^{n} \bmod n,3^{n} \bmod n,...,100^{n} \bmod n]$$
 
-## python
+## Složky
+
+### python
 
     Decision TREE pro piškvorky
 
@@ -19,7 +21,7 @@ Jakub Indrák
 - [piskAIGame.py](python/piskAiGame.py) not done.
   - Zde by si měl hrát proti decision tree, který by se nasledne ucil a generoval data
 
-## funkceAI
+### funkceAI
 
     Decision tree pro funcki
 
@@ -27,7 +29,7 @@ Jakub Indrák
   - vysledek zobrazí jako graf
 - Data se generují pomocí [generatedata.py](funkceAi/generatedata.py)
 
-## Flappy
+### Flappy
 
     Evolution AI, která využívá pygame
 
@@ -37,7 +39,7 @@ Jakub Indrák
 - Audio je depricated
 - Main code je z <https://github.com/LeonMarqs/Flappy-bird-python>
 
-## FlappyNeat
+### FlappyNeat
 
     Evolution AI, která využívá pygame a knohovnu NEAT
 
