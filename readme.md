@@ -6,9 +6,17 @@ Jakub Indrák
 
 [Iterace čísel](<Iterace\ čísel.ipynb>)
 
-- vrací řadu čísel 
-
+vrací řadu čísel... 
 $$[1^{n} \bmod n,2^{n} \bmod n,3^{n} \bmod n,...,100^{n} \bmod n]$$
+
+[Komentáře](<Komentare.ipynb>)
+Všechna řešení k uloze diskuze.
+
+[Pokemoni](<Pokemoni.ipynb>)
+Začátky s Pandas, úlohy na procvičení.
+
+[Perceptron](<01\ -\ Perceptron/01_Perceptron.ipynb>)
+Úlohy spojené s perceptronem.
 
 ## Složky
 
