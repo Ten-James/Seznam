@@ -6,7 +6,8 @@ Jakub Indrák
 
 [Iterace čísel](<Iterace\ čísel.ipynb>)
 
-vrací řadu čísel... 
+vrací řadu čísel...
+
 $$[1^{n} \bmod n,2^{n} \bmod n,3^{n} \bmod n,...,100^{n} \bmod n]$$
 
 [Komentáře](<Komentare.ipynb>)
@@ -49,8 +50,9 @@ Začátky s Pandas, úlohy na procvičení.
 
 ### FlappyNeat
 
-    Evolution AI, která využívá pygame a knohovnu NEAT
+    Evolution AI, která využívá pygame a knihovnu NEAT
 
+- Evoluce je hodně znehodnocená, protože vstupní parametry jsou málo informativní
 - Assety jsou z <https://github.com/zhaolingzhi/FlapPyBird-master>
 - Audio je depricated
 - Main code je z <https://github.com/LeonMarqs/Flappy-bird-python>

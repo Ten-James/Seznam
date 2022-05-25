@@ -69,7 +69,7 @@ class Bird(pygame.sprite.Sprite):
         self.aliveFrom = pygame.time.get_ticks()
         self.Died = 0
 
-        self.netw = ai.Network([6,5,3,1])
+        self.netw = ai.Network([6,1])
 
         self.dist = 1000
         self.speed = SPEED
