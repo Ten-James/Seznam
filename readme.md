@@ -2,6 +2,14 @@
 
 Jakub Indrák 16.5-27.5
 
+- Table of Content
+  - [Jupyter Sešity](#jupyter-sešity)
+  - [Složky](#složky)
+    - [python](#python)
+    - [funkceAI](#funkceai)
+    - [Flappy](#flappy)
+    - [FlappyNeat](#flappyneat)
+
 ## Jupyter Sešity
 
 [Iterace čísel](<Iterace\ čísel.ipynb>)
