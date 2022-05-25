@@ -145,7 +145,7 @@ class Pipe(pygame.sprite.Sprite):
     def update(self):
         global pos
         self.rect[0] -= GAME_SPEED
-        if self.rect[1] > 0:
+        if self.rect[1] > 0 and self.rect[0] < SCREEN_WIDHT:
             pos = [self.rect[0],self.rect[1] - PIPE_GAP /2]
         
 
@@ -183,7 +183,7 @@ def get_ceter_pipes(xpos):
 
 pygame.init()
 screen = pygame.display.set_mode((SCREEN_WIDHT, SCREEN_HEIGHT))
-pygame.display.set_caption('Flappy Bird')
+pygame.display.set_caption('MINE AI ALGORITHM')
 
 BACKGROUND = pygame.image.load('assets/sprites/background-day.png')
 BACKGROUND = pygame.transform.scale(BACKGROUND, (SCREEN_WIDHT, SCREEN_HEIGHT))
@@ -217,6 +217,7 @@ clock = pygame.time.Clock()
 
 begin = True
 
+FONT = pygame.font.Font('freesansbold.ttf', 20)
 while begin:
 
     clock.tick(15)
@@ -282,8 +283,13 @@ while True:
     for group in GENERATIONSIZE:
         if activated[group]:
             bird_group[group].draw(screen)
+            pygame.draw.line(screen,(255,0,0),(bird[group].rect[0]+bird[group].rect[2]/2,bird[group].rect[1]+bird[group].rect[3]/2),(pos[0],pos[1]))
     pipe_group.draw(screen)
     ground_group.draw(screen)
+
+    text_1 = FONT.render(f'A: {str(sum(activated))} G: {generace} S: {score}', True, (0, 0, 0))
+    screen.blit(text_1, (10, 550))
+
 
     pygame.display.update()
 
@@ -302,9 +308,10 @@ while True:
         
         if sum(activated) == 0:
             pipe_group.remove(pipe_group.sprites())
-            pipes = get_ceter_pipes(SCREEN_WIDHT * 2)
-            pipe_group.add(pipes[0])
-            pipe_group.add(pipes[1])
+            for i in range (2):
+                pipes = get_random_pipes(SCREEN_WIDHT * i + 800)
+                pipe_group.add(pipes[0])
+                pipe_group.add(pipes[1])
             alfa = ind
             for b in GENERATIONSIZE:
                 if bird[b].Died == bird[alfa].Died:

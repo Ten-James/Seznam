@@ -1,6 +1,6 @@
 # Repozitář pro Praxe Seznam
 
-Jakub Indrák
+Jakub Indrák 16.5-27.5
 
 ## Jupyter Sešity
 
@@ -46,15 +46,23 @@ Začátky s Pandas, úlohy na procvičení.
 - Evoluce pouze lehce mutuje váhy neuronů, struktura jako taková se nemění
 - Assety jsou z <https://github.com/zhaolingzhi/FlapPyBird-master>
 - Audio je depricated
-- Main code je z <https://github.com/LeonMarqs/Flappy-bird-python>
+- Main code hry je z <https://github.com/LeonMarqs/Flappy-bird-python>
+
+Když se zapla hra s:
+
+    SPEED = 5
+    GRAVITY = 0.25
+
+Tak moje Mutační methoda byla schopná uspět do zhruba 10 generací.
+Bohužel při nastavení hodnot zpět na normal nebyla schopná ani po 200 generací se dostat na stabilní vysledné hodnoty
 
 ### FlappyNeat
 
     Evolution AI, která využívá pygame a knihovnu NEAT
 
-- Evoluce je hodně znehodnocená, protože vstupní parametry jsou málo informativní
+- Evoluce je Funkční.
 - Assety jsou z <https://github.com/zhaolingzhi/FlapPyBird-master>
 - Audio je depricated
-- Main code je z <https://github.com/LeonMarqs/Flappy-bird-python>
+- Main code hry je z <https://github.com/LeonMarqs/Flappy-bird-python>
 
 <!--  -->

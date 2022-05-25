@@ -46,7 +46,7 @@ FONT = pygame.font.Font('freesansbold.ttf', 20)
 
 
 screen = pygame.display.set_mode((SCREEN_WIDHT, SCREEN_HEIGHT))
-pygame.display.set_caption('Flappy Bird')
+pygame.display.set_caption('NEAT AI ALGORITHM')
 
 BACKGROUND = pygame.image.load('assets/sprites/background-day.png')
 BACKGROUND = pygame.transform.scale(BACKGROUND, (SCREEN_WIDHT, SCREEN_HEIGHT))
@@ -90,6 +90,8 @@ class Bird(pygame.sprite.Sprite):
     def getrelativepos(self, pos):
         return [pos[0]-self.rect[0],
         pos[1]-self.rect[1],
+        1 if pos[1]-self.rect[1] > 0 else 0,
+        1 if pos[1]-self.rect[1] < 0 else 0,
         self.rect[1],
         self.speed]
 
@@ -121,7 +123,7 @@ class Pipe(pygame.sprite.Sprite):
     def update(self):
         global pos
         self.rect[0] -= GAME_SPEED
-        if self.rect[1] > 0:
+        if self.rect[1] > 0 and self.rect[0] < SCREEN_WIDHT:
             pos = [self.rect[0],self.rect[1] - PIPE_GAP /2]
         
 
@@ -213,6 +215,10 @@ def eval_genomes(genomes, config):
             break
         a =clock.tick(30)
 
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                pygame.quit()
+
         screen.blit(BACKGROUND, (0, 0))
 
         last += a
@@ -246,6 +252,7 @@ def eval_genomes(genomes, config):
 
         for b in bird:
             bird_group[b.index].draw(screen)
+            pygame.draw.line(screen,(255,0,0),(b.rect[0]+b.rect[2]/2,b.rect[1]+b.rect[3]/2),(pos[0],pos[1]))
         pipe_group.draw(screen)
         ground_group.draw(screen)
         statistics()
@@ -282,7 +289,7 @@ def run(config_path):
     )
 
     pop = neat.Population(config)
-    pop.run(eval_genomes, 100)
+    pop.run(eval_genomes, 1000)
 
 
 if __name__ == "__main__":
