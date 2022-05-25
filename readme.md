@@ -1,14 +1,16 @@
 # Repozitář pro Praxe Seznam
 
 Jakub Indrák 16.5-27.5
+jakub.indrak@email.cz
+j.indrak.st@spseiostrava.cz
 
 - Table of Content
   - [Jupyter Sešity](#jupyter-sešity)
   - [Složky](#složky)
-    - [python](#python)
-    - [funkceAI](#funkceai)
-    - [Flappy](#flappy)
-    - [FlappyNeat](#flappyneat)
+    - [python](#python) sklearn
+    - [funkceAI](#funkceai) sklearn
+    - [Flappy](#flappy) numpy pygame
+    - [FlappyNeat](#flappyneat) pygame neat-python
 
 ## Jupyter Sešity
 
